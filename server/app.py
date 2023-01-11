@@ -5,7 +5,7 @@ from flask import request
 from flask_cors import CORS
 import whisper
 
-app.flask.Flask(__name__)
+app = flask.Flask(__name__)
 CORS(app)
 
 @app.route("/transcribe", methods=["POST"])
