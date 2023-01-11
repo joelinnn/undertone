@@ -48,7 +48,7 @@ def transcribe():
     r.dynamic_energy_threshold = args.dynamic_energy
 
     with sr.Microphone(sample_rate=16000) as source:
-        print("Let's get the talking going!")
+        print("Start Talking!")
         while True:
             # record audio stream into wav
             audio = r.listen(source)

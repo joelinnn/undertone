@@ -33,3 +33,8 @@ def transcribe():
       return result["text"]
     else:
       return "This endpoint only process audio"
+
+
+@app.route("/helloWorld", methods=["GET"])
+def helloWorld():
+  return "hello world"
