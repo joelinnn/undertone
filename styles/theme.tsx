@@ -16,11 +16,11 @@ const theme = extendTheme({
       text: {
         default: '#16161D',
         _dark: '#ade3b8',
-      }
+      },
     }
   },
   colors: {
-    black: '#16161D',
+    black: '#373747',
   },
   fonts,
   breakpoints,

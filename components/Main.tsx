@@ -4,7 +4,7 @@ export const Main = (props:StackProps) => {
   return (
     <Stack
       spacing={"1.5rem"}
-      marginTop={"3rem"}
+      marginTop={"15rem"}
       alignItems={"center"}
       {...props}/>
   )

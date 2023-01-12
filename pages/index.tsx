@@ -3,11 +3,16 @@ import { Container } from '../components/Container'
 import { NavBar } from '../components/NavBar'
 import { Hero } from '../components/Hero'
 import { Main } from '../components/Main'
-import { Flex, Stack, Text, Box, Button } from '@chakra-ui/react'
-import { transcriber } from './api/hello'
-import { Whisp } from '../components/Whisp';
+import { SpeechToCode } from '../components/SpeechToCode'
+import { Flex, Text, Stack } from '@chakra-ui/react'
+import dynamic from 'next/dynamic'
+
+const RenderWhisp = dynamic(() => import('../components/Whisp'), {
+  ssr: false
+})
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -17,15 +22,13 @@ export default function Home() {
       <Container>
         <NavBar/>
         <Hero/>
-        <Flex
-          direction={"row"}
-          alignItems={"center"}
-          fontSize={"1.2rem"}
-          fontWeight={"bold"}>
-            <Text>🗣️ A Speech2Code App powered by OpenAI</Text>
+        <Flex direction={"row"} alignItems={"center"} fontSize={"1.2rem"} fontWeight={"bold"}>
+            <Text>🗣️ A Speech-To-Code App Powered by OpenAI</Text>
         </Flex>
         <Main>
-          <Whisp/>
+          <Stack direction="row" spacing={"10rem"}>
+            <RenderWhisp/>
+          </Stack>
         </Main>
       </Container>
     </>

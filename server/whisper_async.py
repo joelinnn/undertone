@@ -23,7 +23,7 @@ def transcribe(model, language, mic_energy, pause_duration, mic_dynamic_energy, 
     audio_model = whisper.load_model(model)
 
     with sr.Microphone(sample_rate=16000) as source:
-        print("Let's get the talking going!")
+        print("Start talking!")
         while True:
             # record audio stream into wav
             audio = r.listen(source)

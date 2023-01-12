@@ -6,7 +6,8 @@ export const Hero = () => {
       fontFamily="sans"
       fontSize={"3rem"}
       marginBottom={"2rem"}
-      letterSpacing={"-0.05rem"}
-      > My MVP!</Heading>
+      letterSpacing={"-0.05rem"}>
+      Terminology
+      </Heading>
   )
 }
