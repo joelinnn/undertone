@@ -3,7 +3,6 @@ import { Container } from '../components/Container'
 import { NavBar } from '../components/NavBar'
 import { Hero } from '../components/Hero'
 import { Main } from '../components/Main'
-import { SpeechToCode } from '../components/SpeechToCode'
 import { Flex, Text, Stack } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 

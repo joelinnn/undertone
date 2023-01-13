@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { Button, Center } from '@chakra-ui/react'
 import { ReactMic, ReactMicStopEvent } from 'react-mic'
 import { Transcribed } from './Transcribed'
-import { SpeechToCode } from './SpeechToCode'
 
 export default function Whisp () {
   const [transcribedSpeech, setTranscribedSpeech] = useState([''])
@@ -46,21 +45,17 @@ export default function Whisp () {
   }
 
   return (
-    <Center display={'flex-column'} justifyContent='space-evenly'>
-
-      { (!isRecording && !isTranscribing) ? (
-      <Center>
-        <Button onClick={startRecording}>Start Recording!</Button>
+    <Center display="flex-column">
+      <Center marginBottom="10">
+        {(!isRecording && !isTranscribing) ? (
+          <Button onClick={startRecording}>Start Recording!</Button>
+        ) : (
+          <Button onClick={stopRecording} disabled={stopTranscribing} isLoading={isTranscribing} loadingText="transcribing" spinnerPlacement="start">Stop</Button>)}
       </Center>
-      ) : (
+
+        <ReactMic record={isRecording} onStop={stopHandler} strokeColor="#0070f3" backgroundColor="transparent"/>
       <Center>
-        <Button onClick={stopRecording} disabled={stopTranscribing} isLoading={isTranscribing} loadingText='transcribing' spinnerPlacement='start'>Stop</Button>
-      </Center>)}
-
-      <ReactMic record={isRecording} onStop={stopHandler} strokeColor={'#0070f3'} backgroundColor={'transparent'}/>
-
-      <Center flexDirection='row' justifyContent='space-between'>
-        <Transcribed transcribedSpeech={transcribedSpeech} /> <SpeechToCode/>
+        <Transcribed transcribedSpeech={transcribedSpeech} />
       </Center>
 
     </Center>

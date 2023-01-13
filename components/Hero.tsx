@@ -4,10 +4,10 @@ export const Hero = () => {
   return (
     <Heading
       fontFamily="sans"
-      fontSize={"3rem"}
-      marginBottom={"2rem"}
-      letterSpacing={"-0.05rem"}>
-      Terminology
+      fontSize="3rem"
+      marginBottom="2rem"
+      letterSpacing="-0.05rem">
+      Placeholder Title
       </Heading>
   )
 }
