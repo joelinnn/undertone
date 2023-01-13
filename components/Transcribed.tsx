@@ -1,19 +1,20 @@
 import axios from 'axios'
-import { Text, Button, Center, Container } from '@chakra-ui/react'
+import { Button, Container, InputGroup, Input, InputRightElement } from '@chakra-ui/react'
 import { useState } from 'react';
 import { TranslatedCode } from './TranslatedCode'
 
 interface TranscribeProps {
-  transcribedSpeech: Array<string>
+  transcribedSpeech: string[]
+  setTranscribedSpeech: Function
 }
 
-export const Transcribed = ({ transcribedSpeech }: TranscribeProps) => {
+export const Transcribed = ({ transcribedSpeech, setTranscribedSpeech }: TranscribeProps) => {
 
   const [codedSpeech, setCodedSpeech] = useState('')
   const [coding, setCoding] = useState(false)
 
   const clickHandler = () => {
-    let query = document.getElementById('transcribedSpeech')?.textContent
+    let query = (document.getElementById('transcribedSpeech') as HTMLInputElement).value
 
     if (query) {
       setCoding(true)
@@ -32,10 +33,14 @@ export const Transcribed = ({ transcribedSpeech }: TranscribeProps) => {
 
   return (
     <Container>
-      <Center justifyContent="space-between">
-        <Text align="center" fontWeight="bold" id="transcribedSpeech">{transcribedSpeech}</Text>
-        <Button isLoading={coding} onClick={clickHandler}>Translate to Code!</Button>
-      </Center>
+      <InputGroup size="lg" variant="filled">
+        <Input id="transcribedSpeech" fontWeight="bold" value={transcribedSpeech} onChange={(e) => setTranscribedSpeech(e.target.value)}/>
+        <InputRightElement w="auto">
+          <Button onClick={clickHandler} isLoading={coding}>
+            Translate To Code
+          </Button>
+        </InputRightElement>
+      </InputGroup>
       <TranslatedCode codedSpeech={codedSpeech}/>
     </Container>
   )

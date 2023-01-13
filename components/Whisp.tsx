@@ -5,7 +5,7 @@ import { ReactMic, ReactMicStopEvent } from 'react-mic'
 import { Transcribed } from './Transcribed'
 
 export default function Whisp () {
-  const [transcribedSpeech, setTranscribedSpeech] = useState([''])
+  const [transcribedSpeech, setTranscribedSpeech] = useState<string[]>([])
   const [isRecording, setRecording] = useState(false)
   const [isTranscribing, setTranscribing] = useState(false)
   const [stopTranscribing, setStopTranscribing] = useState(false)
@@ -53,9 +53,9 @@ export default function Whisp () {
           <Button onClick={stopRecording} disabled={stopTranscribing} isLoading={isTranscribing} loadingText="transcribing" spinnerPlacement="start">Stop</Button>)}
       </Center>
 
-        <ReactMic record={isRecording} onStop={stopHandler} strokeColor="#0070f3" backgroundColor="transparent"/>
+        <ReactMic record={isRecording} onStop={stopHandler} strokeColor="#0070f3" backgroundColor="#16161D"/>
       <Center>
-        <Transcribed transcribedSpeech={transcribedSpeech} />
+        <Transcribed transcribedSpeech={transcribedSpeech} setTranscribedSpeech={setTranscribedSpeech} />
       </Center>
 
     </Center>
