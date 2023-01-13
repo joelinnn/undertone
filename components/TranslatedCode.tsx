@@ -1,4 +1,5 @@
 import { Center, Code } from "@chakra-ui/react";
+
 interface TranslatedCodeProps {
   codedSpeech: string
 }

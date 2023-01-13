@@ -48,7 +48,7 @@ export default function Whisp () {
     <Center display="flex-column">
       <Center marginBottom="10">
         {(!isRecording && !isTranscribing) ? (
-          <Button onClick={startRecording}>Start Recording!</Button>
+          <Button onClick={startRecording} fontSize="1rem">Start Recording!</Button>
         ) : (
           <Button onClick={stopRecording} disabled={stopTranscribing} isLoading={isTranscribing} loadingText="transcribing" spinnerPlacement="start">Stop</Button>)}
       </Center>

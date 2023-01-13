@@ -33,7 +33,7 @@ export const Transcribed = ({ transcribedSpeech }: TranscribeProps) => {
   return (
     <Container>
       <Center justifyContent="space-between">
-        <Text align="center" id="transcribedSpeech">{transcribedSpeech}</Text>
+        <Text align="center" fontWeight="bold" id="transcribedSpeech">{transcribedSpeech}</Text>
         <Button isLoading={coding} onClick={clickHandler}>Translate to Code!</Button>
       </Center>
       <TranslatedCode codedSpeech={codedSpeech}/>

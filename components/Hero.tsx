@@ -4,10 +4,10 @@ export const Hero = () => {
   return (
     <Heading
       fontFamily="sans"
-      fontSize="3rem"
-      marginBottom="2rem"
+      fontSize="5rem"
+      marginBottom="1rem"
       letterSpacing="-0.05rem">
-      Placeholder Title
+      Undertone 🎤
       </Heading>
   )
 }

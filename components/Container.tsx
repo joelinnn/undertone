@@ -7,7 +7,7 @@ export const Container = (props: FlexProps) => (
     alignItems="center"
     justifyContent="flex-start"
     height="100vh"
-    bg="white"
+    bg="gray.300"
     color="black"
     _dark={{
       bg: "black",
