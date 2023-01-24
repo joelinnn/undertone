@@ -1,6 +1,6 @@
 # Undertone
 
-![Alt Text](/mvp/public/demo.gif)
+![Alt Text](/public/demo.gif)
 A simple webapp that transcribes user speech to text and translates it into code.
 
 ## Features
