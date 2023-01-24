@@ -1,5 +1,8 @@
 # Undertone
 
+![Alt Text](/mvp/public/demo.gif)
+A simple webapp that transcribes user speech to text and translates it into code.
+
 ## Features
 - Speak into your microphone and watch your speech get transcribed automatically
 - Translate your speech into any (coding) language
@@ -8,9 +11,9 @@
 
 ### Frontend
 
-``
+```
 npm run dev
-``
+```
 
 ### Backend
 ```
