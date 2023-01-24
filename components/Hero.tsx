@@ -6,7 +6,8 @@ export const Hero = () => {
       fontFamily="sans"
       fontSize="5rem"
       marginBottom="1rem"
-      letterSpacing="-0.05rem">
+      marginTop='10rem'
+      >
       Undertone 🎤
       </Heading>
   )

@@ -1,7 +1,8 @@
+# Undertone
+
 ## Features
 - Speak into your microphone and watch your speech get transcribed automatically
 - Translate your speech into any (coding) language
-- Dark Mode!
 
 ## Installation
 
